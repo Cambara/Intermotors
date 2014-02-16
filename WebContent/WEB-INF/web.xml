@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>InterMotors</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <filter-name>sitemesh</filter-name>
+    <filter-class>org.sitemesh.config.ConfigurableSiteMeshFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>sitemesh</filter-name>
+    <url-pattern>/view/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>INCLUDE</dispatcher>
+  </filter-mapping>
+  
+<!--   Mapeamento login -->
+  <servlet>
+  	<servlet-name>login</servlet-name>
+  	<servlet-class>IM.br.com.controller.usuario.funcionario.login.LoginServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>login</servlet-name>
+  	<url-pattern>/view/login.do</url-pattern>
+  </servlet-mapping>
+  
+<servlet-mapping>
+  	<servlet-name>login</servlet-name>
+  	<url-pattern>*.out</url-pattern>
+  </servlet-mapping>
+  
+
+  
+  <!--   Mapeamento  de Carro -->
+  <servlet>
+  	<servlet-name>adicionarCarro</servlet-name>
+  	<servlet-class>IM.br.com.controller.auto.carro.AdicionaCarroServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>adicionarCarro</servlet-name>
+  	<url-pattern>/view/usuario/estoquista/adicionarcarro</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>editaCarro</servlet-name>
+  	<servlet-class>IM.br.com.controller.auto.carro.EditaCarroServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>editaCarro</servlet-name>
+  	<url-pattern>/view/usuario/estoquista/editaCarro.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>adicionarimagem</servlet-name>
+  	<servlet-class>IM.br.com.controller.imagem.carro.AdicionaImagemServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>adicionarimagem</servlet-name>
+  	<url-pattern>/view/usuario/estoquista/adicionarimagem</url-pattern>
+  </servlet-mapping>
+  
+ <servlet>
+ 	<servlet-name>listaCarro</servlet-name>
+ 	<servlet-class>IM.br.com.controller.auto.carro.ListaCarroServlet</servlet-class>
+ </servlet>
+  
+ <servlet-mapping>
+ 	<servlet-name>listaCarro</servlet-name>
+ 	<url-pattern>/view/usuario/estoquista/listaCarro</url-pattern>
+ </servlet-mapping>
+<servlet-mapping>
+  	<servlet-name>listaCarro</servlet-name>
+  	<url-pattern>/view/usuario/vendedor/listaCarro</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+ 	<servlet-name>buscaCarroReserva</servlet-name>
+ 	<servlet-class>IM.br.com.controller.auto.carro.BuscaCarroReservaServlet</servlet-class>
+ </servlet>
+
+    
+ <servlet-mapping>
+ 	<servlet-name>buscaCarroReserva</servlet-name>
+ 	<url-pattern>/view/usuario/vendedor/buscacarroreserva.do</url-pattern>
+ </servlet-mapping>
+    
+    
+ <servlet>
+  	<servlet-name>buscaimagem</servlet-name>
+  	<servlet-class>IM.br.com.controller.imagem.carro.BuscaImagemServlet</servlet-class>
+  </servlet>
+ <servlet-mapping>
+  	<servlet-name>buscaimagem</servlet-name>
+  	<url-pattern>*.img</url-pattern>
+ </servlet-mapping>
+
+ <servlet>
+ 	<servlet-name>vendaCarro</servlet-name>
+ 	<servlet-class>IM.br.com.controller.auto.carro.VendeCarroServlet</servlet-class>
+ </servlet>
+
+    
+ <servlet-mapping>
+ 	<servlet-name>vendaCarro</servlet-name>
+ 	<url-pattern>/view/usuario/vendedor/vendecarro.do</url-pattern>
+ </servlet-mapping>
+
+
+<!--   Mapeamento de Reserva -->
+
+<servlet>
+ 	<servlet-name>adicionaReserva</servlet-name>
+ 	<servlet-class>IM.br.com.controller.auto.reserva.AdicionaReservaServlet</servlet-class>
+ </servlet>
+
+    
+ <servlet-mapping>
+ 	<servlet-name>adicionaReserva</servlet-name>
+ 	<url-pattern>/view/usuario/vendedor/adicionareserva.do</url-pattern>
+ </servlet-mapping>
+
+<servlet>
+ 	<servlet-name>listaReservaCliente</servlet-name>
+ 	<servlet-class>IM.br.com.controller.auto.reserva.ListaReservaClienteServlet</servlet-class>
+ </servlet>
+
+    
+ <servlet-mapping>
+ 	<servlet-name>listaReservaCliente</servlet-name>
+ 	<url-pattern>/view/usuario/vendedor/listareserva.do</url-pattern>
+ </servlet-mapping>
+
+<servlet>
+ 	<servlet-name>buscaReserva</servlet-name>
+ 	<servlet-class>IM.br.com.controller.auto.reserva.BuscaReservaServlet</servlet-class>
+ </servlet>
+
+    
+ <servlet-mapping>
+ 	<servlet-name>buscaReserva</servlet-name>
+ 	<url-pattern>/view/usuario/vendedor/buscareserva.do</url-pattern>
+ </servlet-mapping>
+ 
+<servlet>
+	<servlet-name>editaReserva</servlet-name>
+	<servlet-class>IM.br.com.controller.auto.reserva.EditaReservaServlet</servlet-class>
+</servlet>
+
+    
+<servlet-mapping>
+	<servlet-name>editaReserva</servlet-name>
+	<url-pattern>/view/usuario/vendedor/alterareserva.do</url-pattern>
+</servlet-mapping>
+
+<!--   Mapeamento de Cliente -->
+<servlet>
+	<servlet-name>adicionaCliente</servlet-name>
+	<servlet-class>IM.br.com.controller.usuario.cliente.AdicionaClienteServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>adicionaCliente</servlet-name>
+	<url-pattern>/view/usuario/gerente/adicionacliente.do</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>adicionaCliente</servlet-name>
+	<url-pattern>/view/usuario/vendedor/adicionacliente.do</url-pattern>
+</servlet-mapping>
+ 
+<servlet>
+	<servlet-name>editaCliente</servlet-name>
+	<servlet-class>IM.br.com.controller.usuario.cliente.EditaClienteServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>editaCliente</servlet-name>
+	<url-pattern>/view/usuario/gerente/editacliente.do</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>editaCliente</servlet-name>
+	<url-pattern>/view/usuario/vendedor/editacliente.do</url-pattern>
+</servlet-mapping>
+ 
+ <servlet>
+	<servlet-name>listaCliente</servlet-name>
+	<servlet-class>IM.br.com.controller.usuario.cliente.ListaClienteServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>listaCliente</servlet-name>
+	<url-pattern>/view/usuario/gerente/listacliente.do</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>listaCliente</servlet-name>
+	<url-pattern>/view/usuario/vendedor/listacliente.do</url-pattern>
+</servlet-mapping>
+ 
+<!--  Mapeamento Funcionario -->
+<servlet>
+	<servlet-name>adicionaFuncionario</servlet-name>
+	<servlet-class>IM.br.com.controller.usuario.funcionario.AdicionaFuncionarioServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>adicionaFuncionario</servlet-name>
+	<url-pattern>/view/usuario/gerente/adicionafuncionario.do</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>editaFuncionario</servlet-name>
+	<servlet-class>IM.br.com.controller.usuario.funcionario.EditaFuncionarioServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>editaFuncionario</servlet-name>
+	<url-pattern>/view/usuario/gerente/editafuncionario.do</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>listaFuncionario</servlet-name>
+	<servlet-class>IM.br.com.controller.usuario.funcionario.ListaFuncionarioServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>listaFuncionario</servlet-name>
+	<url-pattern>/view/usuario/gerente/listafuncionario.do</url-pattern>
+</servlet-mapping>
+
+<!-- Mapeamento Manutenção -->
+
+<servlet>
+	<servlet-name>adicionaManutencao</servlet-name>
+	<servlet-class>IM.br.com.controller.auto.manutencao.AdicionaManutencaoServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>adicionaManutencao</servlet-name>
+	<url-pattern>/view/usuario/gerente/adicionamanutencao.do</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>listaManutencaoCliente</servlet-name>
+	<servlet-class>IM.br.com.controller.auto.manutencao.ListaManutencaoClienteServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>listaManutencaoCliente</servlet-name>
+	<url-pattern>/view/usuario/gerente/listamanutencaocliente.do</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>listaManutencaoMecanico</servlet-name>
+	<servlet-class>IM.br.com.controller.auto.manutencao.ListaManutencaoMecanicoServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>listaManutencaoMecanico</servlet-name>
+	<url-pattern>/view/usuario/mecanico/listamanutencaomecanico.do</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>buscaManutencao</servlet-name>
+	<servlet-class>IM.br.com.controller.auto.manutencao.BuscaManutencaoServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>buscaManutencao</servlet-name>
+	<url-pattern>/view/usuario/gerente/buscamanutencao.do</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>buscaManutencao</servlet-name>
+	<url-pattern>/view/usuario/mecanico/buscamanutencao.do</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>editaManutencao</servlet-name>
+	<servlet-class>IM.br.com.controller.auto.manutencao.EditaManutencaoServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>editaManutencao</servlet-name>
+	<url-pattern>/view/usuario/gerente/editamanutencao.do</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>editaManutencao</servlet-name>
+	<url-pattern>/view/usuario/mecanico/editamanutencao.do</url-pattern>
+</servlet-mapping>
+
+
+</web-app>

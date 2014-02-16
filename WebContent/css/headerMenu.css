@@ -1,0 +1,111 @@
+
+
+
+
+
+.conf{
+
+	
+	height: 70%;
+	position: relative;
+	/*background-color: #100E0F;*/
+	background-image: url('../img/back.jpg');
+	opacity: 0.9
+}
+
+.conf-txt{
+	
+	margin: 0;
+	float: right;
+	position: relative;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+.conf-txt a{
+	text-align: right;
+	color: white;
+	text-decoration: none;
+	padding-right: 10px;
+}
+
+.conf-txt a:hover{
+
+	color: blue;
+	border-right: 1px;
+	border-right-style: solid;
+	border-right-color: white;
+}
+#title{
+	
+	padding-left: 20px;
+	text-align: left;
+	font-size: 60px;
+	text-decoration: none;
+	color: white;
+
+	
+}
+
+.menu{
+	height: 30%;
+	
+	border-top: 1px;
+	border-top-style: solid;
+	border-color: white;
+	opacity: 0.8;
+
+	
+}
+.menuColor{
+	background-color: #363636;
+	
+}
+.subMenuColor{
+	background-color: gray;
+	opacity: 1;
+
+}
+
+#line{
+
+	
+	height: 1px;
+	background-color: black;
+	opacity: 0.8;
+}
+
+
+
+footer{
+	
+	background-image: url('../img/back.jpg');
+	opacity: 0.8;
+	clear: both;
+	height: 150px;
+	
+}
+
+footer table{
+
+	color: white;
+	margin-left:40px;
+	margin-top:10px;
+	padding-left: 40px;
+	width: 300px;
+	text-align: left;
+
+}
+
+footer a{
+	text-decoration: none;
+	opacity: 1;
+	color: white;
+}
+
+footer a:hover{
+	display: block;
+	color: blue;
+
+
+}
+

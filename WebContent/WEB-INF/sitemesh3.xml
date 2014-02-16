@@ -1,0 +1,12 @@
+<sitemesh>
+    <mapping path="/view/*" decorator="/WEB-INF/decorators/usuario.jsp" />
+
+    <!-- Excluir o caminho da decoracao. -->
+    <mapping path="/images/*" exclue="true" />
+    <mapping path="/javascript/*" exclue="true" />
+    <mapping path="css/*" exclue="true" />
+</sitemesh>
+
+
+
+
